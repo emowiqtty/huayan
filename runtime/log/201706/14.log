@@ -1,0 +1,109 @@
+---------------------------------------------------------------
+[ 2017-06-14T16:13:16+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/huayan/index/add.html
+[ info ] 127.0.0.1:8010/admin.php/huayan/index/add.html [运行时间：0.181011s][吞吐率：5.52req/s] [内存消耗：6,425.05kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'huayan',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=16gotus5jvt4jml24ivgj3mti5; dolphin_home___forward__=%2Fadmin.php%2Fuser%2Findex%2Findex.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.023001s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022002s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\huayan\admin\Index->add[ F:\web\huayan\application\huayan\admin\Index.php ]
+[ info ] [ VIEW ] F:\web\huayan/application/huayan/view/admin/index\add.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'avatar',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_role` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'huayan' ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `menu_auth` FROM `hy_admin_role` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`url_value` FROM `hy_admin_menu` WHERE  `id` IN (1,2,70,51,213,212,214,215,216,217,218,219) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_attachment` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001000s ]

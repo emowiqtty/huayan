@@ -1,0 +1,573 @@
+---------------------------------------------------------------
+[ 2017-06-13T16:57:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/huayan/index/hylist.html
+[ info ] 127.0.0.1:8010/admin.php/huayan/index/hylist.html [运行时间：0.151008s][吞吐率：6.62req/s] [内存消耗：6,640.52kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'huayan',
+    1 => 'index',
+    2 => 'hylist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://127.0.0.1:8010/admin.php/huayan/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=n5drvn5oi8qp6cjd698vp7c0m2; dolphin_home___forward__=%2Fadmin.php%2Fadmin%2Fmenu%2Findex%2Fgroup%2Fhuayan.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.024001s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\huayan\admin\Index->hylist[ F:\web\huayan\application\huayan\admin\Index.php ]
+[ info ] [ VIEW ] F:\web\huayan/application/common/builder/table/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'page_title',
+  9 => 'page_tips',
+  10 => 'tips_type',
+  11 => 'tab_nav',
+  12 => 'hide_checkbox',
+  13 => 'extra_html',
+  14 => 'extra_js',
+  15 => 'extra_css',
+  16 => 'order_columns',
+  17 => 'filter_columns',
+  18 => 'filter_map',
+  19 => '_field_display',
+  20 => '_filter_content',
+  21 => '_filter',
+  22 => 'top_buttons',
+  23 => 'right_buttons',
+  24 => 'search',
+  25 => 'columns',
+  26 => 'pages',
+  27 => 'row_list',
+  28 => '_page_info',
+  29 => 'primary_key',
+  30 => '_table',
+  31 => 'js_list',
+  32 => 'css_list',
+  33 => 'validate',
+  34 => '_js_files',
+  35 => '_css_files',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/hylist' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'huayan' ORDER BY sort,id [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/hylist' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_huayan_article` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_huayan_article` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_attachment` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-06-13T16:57:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/admin/index/profile.html
+[ info ] 127.0.0.1:8010/admin.php/admin/index/profile.html [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：6,635.33kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'profile',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://127.0.0.1:8010/admin.php/huayan/index/hylist.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=n5drvn5oi8qp6cjd698vp7c0m2; dolphin_home___forward__=%2Fadmin.php%2Fadmin%2Fmenu%2Findex%2Fgroup%2Fhuayan.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.030002s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.023001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->profile[ F:\web\huayan\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] F:\web\huayan/application/common/builder/form/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'page_title',
+  9 => 'page_tips',
+  10 => 'tips_type',
+  11 => 'btn_hide',
+  12 => 'btn_title',
+  13 => 'form_items',
+  14 => 'tab_nav',
+  15 => 'post_url',
+  16 => 'form_data',
+  17 => 'extra_html',
+  18 => 'extra_js',
+  19 => 'extra_css',
+  20 => 'ajax_submit',
+  21 => 'hide_header',
+  22 => 'header_title',
+  23 => 'js_list',
+  24 => 'css_list',
+  25 => 'field_triggers',
+  26 => 'field_hide',
+  27 => 'field_values',
+  28 => '_js_files',
+  29 => '_js_init',
+  30 => '_css_files',
+  31 => '_layout',
+  32 => 'btn_extra',
+  33 => 'submit_confirm',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/profile' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'admin' ORDER BY sort,id [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/profile' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_user` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`email`,`email_bind`,`mobile`,`mobile_bind`,`avatar`,`money`,`score`,`role`,`group`,`signup_ip`,`create_time`,`update_time`,`last_login_time`,`last_login_ip`,`sort`,`status` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/profile' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_attachment` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-06-13T16:57:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/huayan/index/hylist.html
+[ info ] 127.0.0.1:8010/admin.php/huayan/index/hylist.html [运行时间：0.142008s][吞吐率：7.04req/s] [内存消耗：6,640.27kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'huayan',
+    1 => 'index',
+    2 => 'hylist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://127.0.0.1:8010/admin.php/huayan/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=n5drvn5oi8qp6cjd698vp7c0m2; dolphin_home___forward__=%2Fadmin.php%2Fadmin%2Fmenu%2Findex%2Fgroup%2Fhuayan.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.034002s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\huayan\admin\Index->hylist[ F:\web\huayan\application\huayan\admin\Index.php ]
+[ info ] [ VIEW ] F:\web\huayan/application/common/builder/table/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'page_title',
+  9 => 'page_tips',
+  10 => 'tips_type',
+  11 => 'tab_nav',
+  12 => 'hide_checkbox',
+  13 => 'extra_html',
+  14 => 'extra_js',
+  15 => 'extra_css',
+  16 => 'order_columns',
+  17 => 'filter_columns',
+  18 => 'filter_map',
+  19 => '_field_display',
+  20 => '_filter_content',
+  21 => '_filter',
+  22 => 'top_buttons',
+  23 => 'right_buttons',
+  24 => 'search',
+  25 => 'columns',
+  26 => 'pages',
+  27 => 'row_list',
+  28 => '_page_info',
+  29 => 'primary_key',
+  30 => '_table',
+  31 => 'js_list',
+  32 => 'css_list',
+  33 => 'validate',
+  34 => '_js_files',
+  35 => '_css_files',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/hylist' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'huayan' ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/hylist' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_huayan_article` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_huayan_article` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_attachment` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2017-06-13T16:59:23+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/huayan/index/hylist.html
+[ info ] 127.0.0.1:8010/admin.php/huayan/index/hylist.html [运行时间：0.130008s][吞吐率：7.69req/s] [内存消耗：6,641.77kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'huayan',
+    1 => 'index',
+    2 => 'hylist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://127.0.0.1:8010/admin.php/huayan/index/hylist.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=n5drvn5oi8qp6cjd698vp7c0m2; dolphin_home___forward__=%2Fadmin.php%2Fadmin%2Fmenu%2Findex%2Fgroup%2Fhuayan.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.025002s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.023001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\huayan\admin\Index->hylist[ F:\web\huayan\application\huayan\admin\Index.php ]
+[ info ] [ VIEW ] F:\web\huayan/application/common/builder/table/layout.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'page_title',
+  9 => 'page_tips',
+  10 => 'tips_type',
+  11 => 'tab_nav',
+  12 => 'hide_checkbox',
+  13 => 'extra_html',
+  14 => 'extra_js',
+  15 => 'extra_css',
+  16 => 'order_columns',
+  17 => 'filter_columns',
+  18 => 'filter_map',
+  19 => '_field_display',
+  20 => '_filter_content',
+  21 => '_filter',
+  22 => 'top_buttons',
+  23 => 'right_buttons',
+  24 => 'search',
+  25 => 'columns',
+  26 => 'pages',
+  27 => 'row_list',
+  28 => '_page_info',
+  29 => 'primary_key',
+  30 => '_table',
+  31 => 'js_list',
+  32 => 'css_list',
+  33 => 'validate',
+  34 => '_js_files',
+  35 => '_css_files',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/hylist' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'huayan' ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/hylist' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_huayan_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_huayan_article` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_attachment` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-06-13T16:59:23+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/huayan/index/add.html
+[ info ] 127.0.0.1:8010/admin.php/huayan/index/add.html [运行时间：0.135008s][吞吐率：7.41req/s] [内存消耗：6,223.13kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'huayan',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://127.0.0.1:8010/admin.php/huayan/index/hylist.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=n5drvn5oi8qp6cjd698vp7c0m2; dolphin_home___forward__=%2Fadmin.php%2Fadmin%2Fmenu%2Findex%2Fgroup%2Fhuayan.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.035002s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\huayan\admin\Index->add[ F:\web\huayan\application\huayan\admin\Index.php ]
+[ info ] [ VIEW ] F:\web\huayan/application/huayan/view/admin/index\add.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'huayan' ORDER BY sort,id [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `hy_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_attachment` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `path` FROM `hy_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2017-06-13T16:59:35+08:00 ] 127.0.0.1 127.0.0.1 POST /admin.php/huayan/index/add.html
+[ info ] 127.0.0.1:8010/admin.php/huayan/index/add.html [运行时间：0.120006s][吞吐率：8.33req/s] [内存消耗：6,091.41kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] F:\web\huayan\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'huayan',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '127.0.0.1:8010',
+  'connection' => 'keep-alive',
+  'content-length' => '356',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://127.0.0.1:8010',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://127.0.0.1:8010/admin.php/huayan/index/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=n5drvn5oi8qp6cjd698vp7c0m2; dolphin_home___forward__=%2Fadmin.php%2Fadmin%2Fmenu%2Findex%2Fgroup%2Fhuayan.html',
+)
+[ info ] [ PARAM ] array (
+  'addTime' => '2017-06-13',
+  'waterTemperatureYs' => '1',
+  'waterTemperatureCcs' => '1',
+  'chromaYs' => '1',
+  'chromaCcs' => '1',
+  'eyeYs' => '1',
+  'eyeCcs' => '1',
+  'smellYs' => '1',
+  'smellCcs' => '1',
+  'phYs' => '1',
+  'phCcs' => '1',
+  'oxygenYs' => '1',
+  'oxygenCcs' => '1',
+  'ammoniaYs' => '1',
+  'ammoniaCcs' => '1',
+  'colonyYs' => '1',
+  'colonyCcs' => '1',
+  'totalColiformYs' => '1',
+  'totalColiformCcs' => '1',
+  'thermotolerantColiformYs' => '11',
+  'thermotolerantColiformCcs' => '1',
+  'samplingCcsYl' => '1',
+  'samplingYsZd' => '1',
+  'samplingCcsZd' => '1',
+  'beizhu' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.038002s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026001s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'dolphin_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\huayan\admin\Index->add[ F:\web\huayan\application\huayan\admin\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=huayan;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_config` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `hy_admin_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_module` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `hy_admin_module` WHERE  `config` <> '' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_hook` WHERE  `status` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_plugin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `hy_admin_plugin` WHERE  `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_hook_plugin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `hy_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `hy_admin_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `hy_admin_menu` WHERE  `status` = 1  AND `module` = 'huayan' ORDER BY sort,id [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `hy_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'huayan/index/add' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `hy_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `hy_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]

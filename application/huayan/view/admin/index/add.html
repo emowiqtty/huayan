@@ -1,0 +1,357 @@
+{extend name="$_admin_base_layout" /}
+
+{block name="content"}
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="block block-bordered">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">新增数据</h3>
+            </div>
+            <div class="block-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="block">
+                        <div class="block-content block-content-full bg-primary ribbon ribbon-modern ribbon-crystal">
+                        <div class="ribbon-box font-w600 text-uppercase">2017年6月14日</div>
+                        <div class="text-center push-50-t push-50">
+                        <!-- <h3 class="text-white-op">水质检测数据填报</h3> -->
+                        <div class="block-content block-content-full text-center">
+                            <div>
+                            <img class="img-avatar img-avatar96" src="{$avatar}" alt="">
+                            </div>
+                            <div class="h5 push-15-t push-5">{:session('user_auth.nickname')}</div>
+                            <div class="text">{:session('user_auth.role_name')}</div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="js-wizard-simple block">
+                        <ul class="nav nav-tabs nav-justified">
+                        <li class="active">
+                        <a href="#simple-classic-progress-step1" data-toggle="tab" aria-expanded="true">1. 基础水样</a>
+                        </li>
+                        <li class="">
+                        <a href="#simple-classic-progress-step2" data-toggle="tab" aria-expanded="false">2. 检测日志</a>
+                        </li>
+                        <li class="">
+                        <a href="#simple-classic-progress-step3" data-toggle="tab" aria-expanded="false">3. 备注问题</a>
+                        </li>
+                        </ul>
+                        <form class="form-horizontal" action="{:url('index/add')}" method="post">
+                        <div class="block-content block-content-mini block-content-full border-b">
+                        <div class="wizard-progress progress progress-mini remove-margin-b">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 33.3333%;"></div>
+                        </div>
+                        </div>
+                        <div class="block-content tab-content">
+                        <div class="tab-pane fade fade-up push-30-t push-50 active in" id="simple-classic-progress-step1">
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-3">
+                            <label for="simple-classic-progress-firstname">水源水</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <label for="simple-classic-progress-firstname">出厂水</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">水温</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="waterTemperatureYs" name="waterTemperatureYs">
+                                <span class="input-group-addon">°C</span>
+                            </div>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="waterTemperatureCcs" name="waterTemperatureCcs">
+                                <span class="input-group-addon">°C</span>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">色度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="chromaYs" name="chromaYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <div class="input-group">
+                            <span class="input-group-addon"><</span>
+                                <input class="form-control" type="text" id="chromaCcs" name="chromaCcs">
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">肉眼可见物</label>
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-1">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <input type="radio" name="eyeYs" checked="" value="1"><span></span> 有
+                                </label>
+                                <label class="css-input css-radio css-radio-primary">
+                                <input type="radio" name="eyeYs" value="0"><span></span> 无
+                                </label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-3">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <input type="radio" name="eyeCcs" checked="" value="1"><span></span> 有
+                                </label>
+                                <label class="css-input css-radio css-radio-primary">
+                                <input type="radio" name="eyeCcs" value="0"><span></span> 无
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">嗅和味</label>
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-1">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <input type="radio" name="smellYs" checked="" value="1"><span></span> 有
+                                </label>
+                                <label class="css-input css-radio css-radio-primary">
+                                <input type="radio" name="smellYs" value="0"><span></span> 无
+                                </label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-3">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <input type="radio" name="smellCcs" checked="" value="1"><span></span> 有
+                                </label>
+                                <label class="css-input css-radio css-radio-primary">
+                                <input type="radio" name="smellCcs" value="0"><span></span> 无
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">pH值</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="phYs" name="phYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="phCcs" name="phCcs">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">耗氧量</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="oxygenYs" name="oxygenYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="oxygenCcs" name="oxygenCcs">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">氨氮</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="ammoniaYs" name="ammoniaYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <div class="input-group">
+                            <span class="input-group-addon"><</span>
+                                <input class="form-control" type="text" id="ammoniaCcs" name="ammoniaCcs">
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">菌落总数</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="colonyYs" name="colonyYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="colonyCcs" name="colonyCcs">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">总大肠菌群</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="totalColiformYs" name="totalColiformYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="totalColiformCcs" name="totalColiformCcs">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">耐热大肠菌群</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="thermotolerantColiformYs" name="thermotolerantColiformYs">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="thermotolerantColiformCcs" name="thermotolerantColiformCcs">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">取样时余氯</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="samplingCcsYl" name="samplingCcsYl">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">取样时浊度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <input class="form-control" type="text" id="samplingYsZd" name="samplingYsZd">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <input class="form-control" type="text" id="samplingCcsZd" name="samplingCcsZd">
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        <div class="tab-pane fade fade-up push-30-t push-50" id="simple-classic-progress-step2">
+                        
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">时间</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">出厂水二氧化氯</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">出厂水浑浊度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">源水浑浊度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">滤前浑浊度</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="js-masked-time form-control" type="text" id="example-masked-time" name="rz[][time]" placeholder="00:00">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][ccseyhl]">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][ccszd]">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][yszd]">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][lqzd]">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="abc">
+                            <div class="col-sm-1 col-sm-offset-101">
+                                <button class="btn btn-primary push-5-r push-10" id="addtable" type="button" onclick="addCol()"><i class="fa fa-plus"></i> 添加一行 </button>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                                <button class="btn btn-danger push-5-r push-10" id="addtable" type="button" onclick="delCol()"><i class="fa fa-times"></i> 删除一行 </button>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            //添加一行
+                            function addCol() {　
+
+                    　　　　　　var col = "<div class=\"form-group\" id=\"newtable\"><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"js-masked-time form-control\" type=\"text\" name=\"rz[][time]\" placeholder=\"00:00\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][ccseyhl]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][ccszd]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][yszd]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][lqzd]\"></div></div>";
+                    　　　　　　$("#abc").before(col);　
+                    　　　　}　
+                            function delCol() {　
+                    　　　　　　//移除最后一列　
+                    　　　　　　$('div #newtable:last').remove();　
+                    　　　　}　
+
+                        </script>
+
+
+                        </div>
+
+                        <div class="tab-pane fade fade-up push-30-t push-50" id="simple-classic-progress-step3">
+                        <div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-2">
+                        <label for="simple-classic-progress-city">备注</label>
+                        <textarea class="form-control" name="beizhu" rows="6" placeholder="填写备注.."></textarea>
+                        </div>
+                        </div>
+                        
+                        
+                        </div>
+                        </div>
+                        <div class="block-content block-content-mini block-content-full border-t">
+                        <div class="row">
+                        <div class="col-xs-6">
+                        <button class="wizard-prev btn btn-default disabled" type="button"><i class="fa fa-arrow-left"></i> 返回</button>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                        <button class="wizard-next btn btn-default" type="button" style="display: inline-block;">下一步 <i class="fa fa-arrow-right"></i></button>
+                        <button class="wizard-finish btn btn-primary" type="submit" style="display: none;"><i class="fa fa-check"></i> 提交</button>
+                        </div>
+                        </div>
+                        </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script src="__ADMIN_JS__/core/jquery.countTo.min.js"></script>
+<script src="https://demo.pixelcave.com/oneui/assets/js/pages/base_forms_wizard.js"></script>
+<script src="https://demo.pixelcave.com/oneui/assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+
+
+
+
+<script src="https://demo.pixelcave.com/oneui/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+<script>
+    jQuery(function () {
+        App.initHelpers(['appear-countTo']);
+    });
+</script>
+{/block}

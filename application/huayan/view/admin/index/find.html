@@ -1,0 +1,241 @@
+{extend name="$_admin_base_layout" /}
+
+{block name="content"}
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="block block-bordered">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">新增数据</h3>
+            </div>
+            <div class="block-content">
+                <div class="row">
+                    <form action="{:url('index/add')}" method="post">
+                    <table width="900" bordercolor="red" border="1" align="center" cellspacing="0">
+                        <tbody>
+                            <tr class="firstRow">
+                            <td height="30" colspan="4"> 
+                                <div class="form-group">
+                                <label class="col-md-3 control-label" for="example-hf-email">检测日期</label>
+                                <div class="col-md-7">
+                                <input class="form-control" type="text"  name="addTime" value="{$info.addTime}">
+                                </div>
+                                </div>
+                            </td>
+                            </tr>
+                    </tbody>
+                    <tbody>
+                        <tr bgcolor="#FCFDEE">
+                          <td rowspan="1" style="text-align: center;"><strong>检测项目</strong></td>
+                          <td height="45" colspan="1" style="text-align: center;"><strong>水源水</strong></td>
+                          <td height="45" colspan="1" style="text-align: center;"><strong>出厂水</strong></td>
+                        </tr>
+
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                        <td style="text-align: center;" width="100" height="45">水温</td>
+                        <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="waterTemperatureYs" value="{$info.waterTemperatureYs}">
+                            </div>
+                        </td>
+                        <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="waterTemperatureCcs" value="{$info.waterTemperatureCcs}">
+                            </div>
+                        </td>
+
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">色度</td>
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="chromaYs" value="{$info.chromaYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="chromaCcs" value="{$info.chromaCcs}">
+                            </div>
+                            </td>
+
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">肉眼可见物</td>
+
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-6">
+                            {if condition="$info.eyeYs eq 1"}有{else /}无{/if}
+
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-6">
+                            {if condition="$info.eyeCcs eq 1"}有{else /}无{/if}
+                            </div>
+                            </td>
+
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">嗅和味</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-6">
+                            {if condition="$info.smellYs eq 1"}有{else /}无{/if}
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-6">
+                            {if condition="$info.smellCcs eq 1"}有{else /}无{/if}
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">pH值</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="phYs" value="{$info.phYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="phCcs" value="{$info.phCcs}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">耗氧量</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="oxygenYs" value="{$info.oxygenYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="oxygenCcs" value="{$info.oxygenCcs}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">氨氮</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="ammoniaYs" value="{$info.ammoniaYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="ammoniaCcs" value="{$info.ammoniaCcs}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">菌落总数</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="colonyYs" value="{$info.colonyYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="colonyCcs" value="{$info.colonyCcs}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">总大肠菌群</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="totalColiformYs" value="{$info.totalColiformYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="totalColiformCcs" value="{$info.totalColiformCcs}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">耐热大肠菌群</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="thermotolerantColiformYs" value="{$info.thermotolerantColiformYs}">
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="thermotolerantColiformCcs" value="{$info.thermotolerantColiformCcs}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">取样时余氯</td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                
+                            </div>
+                            </td>
+                            
+                            <td style="text-align: center;" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="samplingCcsYl" value="{$info.samplingCcsYl}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
+                            <td style="text-align: center;" width="100" height="45">取样时浊度</td>
+                            
+                            <td style="" height="45">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="samplingYsZd" value="{$info.samplingYsZd}">
+                            </div>
+                            </td>
+                            
+                            <td height="45" align="center" valign="middle" style="text-align: center;">
+                            <div class="col-xs-4">
+                                <input class="form-control" type="text" name="samplingCcsZd" value="{$info.samplingCcsZd}">
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="text-align: center;" height="55">
+                                <textarea class="form-control" name="beizhu" rows="6" placeholder="无备注..">{$info.beizhu}</textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script src="__ADMIN_JS__/core/jquery.countTo.min.js"></script>
+<script>
+    jQuery(function () {
+        App.initHelpers(['appear-countTo']);
+    });
+</script>
+{/block}

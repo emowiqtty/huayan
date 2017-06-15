@@ -1,0 +1,180 @@
+{extend name="$_admin_base_layout" /}
+
+{block name="content"}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+<div class="bg-image img-rounded overflow-hidden push" style="background-image: url('__ADMIN_IMG__/huayan/20170614114324.jpg');">
+<div class="bg-black-op">
+<div class="content">
+<div class="block block-transparent block-themed text-center">
+<div class="block-content">
+<h1 class="h1 font-w700 text-white animated fadeInDown push-5">恒远水务检测</h1>
+<h2 class="h4 font-w400 text-white-op animated fadeInUp">吉首市城市供水总公司</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-primary" data-toggle="countTo" data-to="{$datainfo['total']|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">条数据</div>
+        </a>
+    </div>
+    <!-- <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('column/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-success" data-toggle="countTo" data-to="{$column|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">栏目</div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('page/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-info" data-toggle="countTo" data-to="{$page|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">单页</div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('model/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-warning"><span data-toggle="countTo" data-to="{$model|default=0}"></span></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">模型</div>
+        </a>
+    </div> -->
+</div>
+
+<div class="row">
+<div class="col-lg-4">
+<div class="block">
+<div class="block-header">
+<ul class="block-options">
+<li>
+<button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+</li>
+</ul>
+<h3 class="block-title">近7日水温变化</h3>
+</div>
+<div class="block-content block-content-full text-center"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+<canvas id="chartjs01" class="js-chartjs2-lines" width="710" height="355" style="display: block; width: 710px; height: 355px;"></canvas>
+</div>
+</div>
+</div>
+<script>new Chart(document.getElementById("chartjs01"),{"type":"line","data":{"labels":["2017-6-8","2017-6-9","2017-6-10","2017-6-11","2017-6-12","2017-6-13","2017-6-14"],"datasets":[{"label":"源水水温","data":[65,59,27,81,56,55,40],"fill":false,"borderColor":"#03A9F4","lineTension":0.1},{"label":"出厂水水温","data":[11,21,80,81,33,51,30],"fill":false,"borderColor":"#9C27B0","lineTension":0.1}]},"options":{}});</script>
+
+<div class="col-lg-4">
+<div class="block">
+<div class="block-header">
+<ul class="block-options">
+<li>
+<button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+</li>
+</ul>
+<h3 class="block-title">近7日浊度变化</h3>
+</div>
+<div class="block-content block-content-full text-center"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+<canvas id="chartjs02" class="js-chartjs2-lines" width="710" height="355" style="display: block; width: 710px; height: 355px;"></canvas>
+</div>
+</div>
+</div>
+<script>new Chart(document.getElementById("chartjs02"),{"type":"line","data":{"labels":["2017-6-8","2017-6-9","2017-6-10","2017-6-11","2017-6-12","2017-6-13","2017-6-14"],"datasets":[{"label":"源水浊度","data":[65,59,27,81,56,55,40],"fill":false,"borderColor":"rgb(15, 192, 392)","lineTension":0.1},{"label":"出厂水浊度","data":[11,21,80,81,33,51,30],"fill":false,"borderColor":"rgb(55, 142, 292)","lineTension":0.1}]},"options":{}});</script>
+
+<div class="col-lg-4">
+<div class="block">
+<div class="block-header">
+<ul class="block-options">
+<li>
+<button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+</li>
+</ul>
+<h3 class="block-title">近7日余氯数据</h3>
+</div>
+<div class="block-content block-content-full text-center"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+<canvas id="chartjs03" class="js-chartjs2-lines" width="710" height="355" style="display: block; width: 710px; height: 355px;"></canvas>
+</div>
+</div>
+</div>
+<script>new Chart(document.getElementById("chartjs03"),{"type":"line","data":{"labels":["2017-6-8","2017-6-9","2017-6-10","2017-6-11","2017-6-12","2017-6-13","2017-6-14"],"datasets":[{"label":"源水余氯","data":[65,59,27,81,56,55,40],"fill":false,"borderColor":"#FF9800","lineTension":0.1},{"label":"出厂水余氯","data":[11,21,80,81,33,51,30],"fill":false,"borderColor":"#FF5722","lineTension":0.1}]},"options":{}});</script>
+
+</row>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="block block-bordered">
+            <div class="block-header bg-gray-lighter">
+                <h3 class="block-title">快捷操作</h3>
+            </div>
+            <div class="block-content">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-lg-2">
+                        <a class="block block-link-hover3 text-center" href="{:url('index/add')}">
+                            <div class="block-content block-content-full">
+                                <i class="fa fa-plus fa-3x text-muted"></i>
+                                <div class="font-w600 push-15-t">新增数据</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- <div class="col-xs-6 col-sm-4 col-lg-2">
+                        <a class="block block-link-hover3 text-center" href="{:url('nav/index')}">
+                            <div class="block-content block-content-full">
+                                <i class="fa fa-map-signs fa-3x text-muted"></i>
+                                <div class="font-w600 push-15-t">导航管理</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-2">
+                        <a class="block block-link-hover3 text-center" href="{:url('slider/index')}">
+                            <div class="block-content block-content-full">
+                                <i class="fa fa-photo fa-3x text-muted"></i>
+                                <div class="font-w600 push-15-t">滚动图片</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-2">
+                        <a class="block block-link-hover3 text-center" href="{:url('support/index')}">
+                            <div class="block-content block-content-full">
+                                <i class="fa fa-commenting fa-3x text-muted"></i>
+                                <div class="font-w600 push-15-t">客服管理</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-2">
+                        <a class="block block-link-hover3 text-center" href="{:url('advert/index')}">
+                            <div class="block-content block-content-full">
+                                <i class="fa fa-handshake-o fa-3x text-muted"></i>
+                                <div class="font-w600 push-15-t">广告管理</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-2">
+                        <a class="block block-link-hover3 text-center" href="{:url('link/index')}">
+                            <div class="block-content block-content-full">
+                                <i class="fa fa-link fa-3x text-muted"></i>
+                                <div class="font-w600 push-15-t">友情链接</div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script src="__ADMIN_JS__/core/jquery.countTo.min.js"></script>
+
+
+<script>
+    jQuery(function () {
+        App.initHelpers(['appear-countTo']);
+    });
+</script>
+{/block}
