@@ -171,17 +171,17 @@ class Index extends Admin
 
 	public function down($id = null)
     {
-    	// dump($id)
+
         // 查询数据
         $data = Db::name('huayan_article')->where('id', $id)->select();
         //dump($data);die;
         // 设置表头信息（对应字段名,宽度，显示表头名称）
-        $cellName = [
-            ['id', '10', 'ID'],
+        
+        // 引入 extend/phpexcel/PHPExcel.php
+		import('phpexcel.PHPExcel', EXTEND_PATH);
+		//实例化PHPExcel
+		$objPHPExcel = new \PHPExcel();
 
-        ];
-        // 调用插件（传入插件名，[导出文件名、表头信息、具体数据]）
-        plugin_action('Excel/Excel/export', ['水质报表', $cellName, $data]);
     }
 
 
