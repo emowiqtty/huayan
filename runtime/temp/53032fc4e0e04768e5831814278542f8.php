@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:59:"F:\web\huayan/application/huayan/view/admin/index\find.html";i:1497411037;s:48:"F:\web\huayan/application/admin/view/layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:59:"F:\web\huayan/application/huayan/view/admin/index\find.html";i:1497581637;s:48:"F:\web\huayan/application/admin/view/layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -568,221 +568,294 @@
     <div class="col-md-12">
         <div class="block block-bordered">
             <div class="block-header bg-gray-lighter">
-                <h3 class="block-title">新增数据</h3>
+                <h3 class="block-title">填报数据</h3>
             </div>
             <div class="block-content">
                 <div class="row">
-                    <form action="<?php echo url('index/add'); ?>" method="post">
-                    <table width="900" bordercolor="red" border="1" align="center" cellspacing="0">
-                        <tbody>
-                            <tr class="firstRow">
-                            <td height="30" colspan="4"> 
-                                <div class="form-group">
-                                <label class="col-md-3 control-label" for="example-hf-email">检测日期</label>
-                                <div class="col-md-7">
-                                <input class="form-control" type="text"  name="addTime" value="<?php echo $info['addTime']; ?>">
-                                </div>
-                                </div>
-                            </td>
-                            </tr>
-                    </tbody>
-                    <tbody>
-                        <tr bgcolor="#FCFDEE">
-                          <td rowspan="1" style="text-align: center;"><strong>检测项目</strong></td>
-                          <td height="45" colspan="1" style="text-align: center;"><strong>水源水</strong></td>
-                          <td height="45" colspan="1" style="text-align: center;"><strong>出厂水</strong></td>
-                        </tr>
+                    <div class="col-sm-12">
+                        <div class="block">
+                        <div class="block-content block-content-full bg-primary ribbon ribbon-modern ribbon-crystal">
+                        <div class="ribbon-box font-w600 text-uppercase">填报时间：<?php echo date("Y-m-d",$info['addTime']) ?></div>
+                        <div class="text-center push-50-t push-50">
+                        <!-- <h3 class="text-white-op">水质检测数据填报</h3> -->
+                        <div class="block-content block-content-full text-center">
+                            <div>
+                                <h3 class="text-white-op">XXXXXXXXXXXXXXXXXXXXXXXXXXXX</h3>
+                            </div>
+                            <div class="h5 push-15-t push-5">填报人员：<?php echo $info['touser']; ?></div>
+                            <div class="text">
+                                <?php if($info['isWaterworks'] == 2): ?> 二水厂
+                                <?php elseif($info['isWaterworks'] == 3): ?> 三水厂
+                                <?php else: ?> 管理员
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
 
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                        <td style="text-align: center;" width="100" height="45">水温</td>
-                        <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="waterTemperatureYs" value="<?php echo $info['waterTemperatureYs']; ?>">
-                            </div>
-                        </td>
-                        <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="waterTemperatureCcs" value="<?php echo $info['waterTemperatureCcs']; ?>">
-                            </div>
-                        </td>
+                    <div class="col-lg-12">
+                        <div class="js-wizard-simple block">
+                        <ul class="nav nav-tabs nav-justified">
+                        <li class="active">
+                        <a href="#simple-classic-progress-step1" data-toggle="tab" aria-expanded="true">1. 基础水样</a>
+                        </li>
+                        <li class="">
+                        <a href="#simple-classic-progress-step2" data-toggle="tab" aria-expanded="false">2. 检测日志</a>
+                        </li>
+                        <li class="">
+                        <a href="#simple-classic-progress-step3" data-toggle="tab" aria-expanded="false">3. 备注问题</a>
+                        </li>
+                        </ul>
+                        <form class="form-horizontal" action="<?php echo url('index/add'); ?>" method="post">
+                        <div class="block-content block-content-mini block-content-full border-b">
+                        <div class="wizard-progress progress progress-mini remove-margin-b">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 33.3333%;"></div>
+                        </div>
+                        </div>
+                        <div class="block-content tab-content">
+                        <div class="tab-pane fade fade-up push-30-t push-50 active in" id="simple-classic-progress-step1">
 
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">色度</td>
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="chromaYs" value="<?php echo $info['chromaYs']; ?>">
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-3">
+                            <label for="simple-classic-progress-firstname">水源水</label>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="chromaCcs" value="<?php echo $info['chromaCcs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <label for="simple-classic-progress-firstname">出厂水</label>
                             </div>
-                            </td>
+                        </div>
 
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">肉眼可见物</td>
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">水温</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <div class="input-group">
+                                <?php echo $info['waterTemperatureYs']; ?>
+                            </div>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <div class="input-group">
+                                <?php echo $info['waterTemperatureCcs']; ?>
+                            </div>
+                            </div>
+                        </div>
 
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-6">
-                            <?php if($info['eyeYs'] == 1): ?>有<?php else: ?>无<?php endif; ?>
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">色度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                                <?php echo $info['chromaYs']; ?>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <div class="input-group">
+                                < <?php echo $info['chromaCcs']; ?>
+                            </div>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">肉眼可见物</label>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-6">
-                            <?php if($info['eyeCcs'] == 1): ?>有<?php else: ?>无<?php endif; ?>
+                            <div class="col-sm-2 col-sm-offset-1">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <?php if($info['eyeYs'] == 1): ?> 有 <?php else: ?> 无 <?php endif; ?>
+                                </label>
                             </div>
-                            </td>
+                            <div class="col-sm-1 col-sm-offset-3">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <?php if($info['eyeCcs'] == 1): ?> 有 <?php else: ?> 无 <?php endif; ?>
+                                </label>
+                            </div>
+                        </div>
 
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">嗅和味</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-6">
-                            <?php if($info['smellYs'] == 1): ?>有<?php else: ?>无<?php endif; ?>
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">嗅和味</label>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-6">
-                            <?php if($info['smellCcs'] == 1): ?>有<?php else: ?>无<?php endif; ?>
+                            <div class="col-sm-2 col-sm-offset-1">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <?php if($info['smellYs'] == 1): ?> 有 <?php else: ?> 无 <?php endif; ?>
+                                </label>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">pH值</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="phYs" value="<?php echo $info['phYs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-3">
+                                <label class="css-input css-radio css-radio-primary push-10-r">
+                                <?php if($info['smellCcs'] == 1): ?> 有 <?php else: ?> 无 <?php endif; ?>
+                                </label>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="phCcs" value="<?php echo $info['phCcs']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">pH值</label>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">耗氧量</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="oxygenYs" value="<?php echo $info['oxygenYs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-1">
+                                <?php echo $info['phYs']; ?>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="oxygenCcs" value="<?php echo $info['oxygenCcs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-4">
+                                <?php echo $info['phCcs']; ?>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">氨氮</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="ammoniaYs" value="<?php echo $info['ammoniaYs']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">耗氧量</label>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="ammoniaCcs" value="<?php echo $info['ammoniaCcs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-1">
+                                <?php echo $info['oxygenYs']; ?>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">菌落总数</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="colonyYs" value="<?php echo $info['colonyYs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-4">
+                                <?php echo $info['oxygenCcs']; ?>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="colonyCcs" value="<?php echo $info['colonyCcs']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">氨氮</label>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">总大肠菌群</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="totalColiformYs" value="<?php echo $info['totalColiformYs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-1">
+                                <?php echo $info['ammoniaYs']; ?>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="totalColiformCcs" value="<?php echo $info['totalColiformCcs']; ?>">
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <div class="input-group">
+                                < <?php echo $info['ammoniaCcs']; ?>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">耐热大肠菌群</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="thermotolerantColiformYs" value="<?php echo $info['thermotolerantColiformYs']; ?>">
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="thermotolerantColiformCcs" value="<?php echo $info['thermotolerantColiformCcs']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">菌落总数</label>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">取样时余氯</td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <?php if($info['colonyYs'] == 0): ?> 未检出 <?php else: ?> <?php echo $info['colonyYs']; endif; ?>
                             </div>
-                            </td>
-                            
-                            <td style="text-align: center;" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="samplingCcsYl" value="<?php echo $info['samplingCcsYl']; ?>">
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <?php if($info['colonyCcs'] == 0): ?> 未检出 <?php else: ?> <?php echo $info['colonyCcs']; endif; ?>
                             </div>
-                            </td>
-                        </tr>
-                        <tr bgcolor="#FFFFFF" onmousemove="javascript:this.bgColor='#FCFDEE';" onmouseout="javascript:this.bgColor='#FFFFFF';">
-                            <td style="text-align: center;" width="100" height="45">取样时浊度</td>
-                            
-                            <td style="" height="45">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="samplingYsZd" value="<?php echo $info['samplingYsZd']; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">总大肠菌群</label>
                             </div>
-                            </td>
-                            
-                            <td height="45" align="center" valign="middle" style="text-align: center;">
-                            <div class="col-xs-4">
-                                <input class="form-control" type="text" name="samplingCcsZd" value="<?php echo $info['samplingCcsZd']; ?>">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <?php if($info['totalColiformYs'] == 0): ?> 未检出 <?php else: ?> <?php echo $info['totalColiformYs']; endif; ?>
                             </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" style="text-align: center;" height="55">
-                                <textarea class="form-control" name="beizhu" rows="6" placeholder="无备注.."><?php echo $info['beizhu']; ?></textarea>
-                            </td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <button class="btn btn-sm btn-primary" type="submit">Submit</button>
-                </form>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <?php if($info['totalColiformCcs'] == 0): ?> 未检出 <?php else: ?> <?php echo $info['totalColiformCcs']; ?>" <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">耐热大肠菌群</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <?php if($info['thermotolerantColiformYs'] == 0): ?> 未检出 <?php else: ?> <?php echo $info['thermotolerantColiformYs']; endif; ?>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                            <?php if($info['thermotolerantColiformCcs'] == 0): ?> 未检出 <?php else: ?> <?php echo $info['thermotolerantColiformCcs']; endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">取样时余氯</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                            
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                                <?php echo $info['samplingCcsYl']; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-1">
+                            <label for="simple-classic-progress-firstname">取样时浊度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-1">
+                                <?php echo $info['samplingYsZd']; ?>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-4">
+                                <?php echo $info['samplingCcsZd']; ?>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        <div class="tab-pane fade fade-up push-30-t push-50" id="simple-classic-progress-step2">
+                        
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">时间</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">出厂水二氧化氯</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">出厂水浑浊度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">源水浑浊度</label>
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <label for="simple-classic-progress-firstname">滤前浑浊度</label>
+                            </div>
+                        </div>
+
+                        <?php if(is_array($baobiao) || $baobiao instanceof \think\Collection || $baobiao instanceof \think\Paginator): $i = 0; $__LIST__ = $baobiao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                        <div class="form-group">
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="js-masked-time form-control" type="text" name="time[]" value="<?php echo $vo['time']; ?>" readonly="true">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" name="ccseyhl[]" value="<?php echo $vo['ccseyhl']; ?>" readonly="true">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" name="ccszd[]" value="<?php echo $vo['ccszd']; ?>" readonly="true">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" name="yszd[]" value="<?php echo $vo['yszd']; ?>" readonly="true">
+                            </div>
+                            <div class="col-sm-1 col-sm-offset-101">
+                            <input class="form-control" type="text" name="lqzd[]" value="<?php echo $vo['lqzd']; ?>" readonly="true">
+                            </div>
+                        </div>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+
+                        </div>
+
+                        <div class="tab-pane fade fade-up push-30-t push-50" id="simple-classic-progress-step3">
+                        <div class="form-group">
+                        <div class="col-sm-8 col-sm-offset-2">
+                        <label for="simple-classic-progress-city">备注</label>
+                        <textarea class="form-control" name="beizhu" rows="6" placeholder="无备注.." readonly="true"><?php echo $info['beizhu']; ?></textarea>
+                        </div>
+                        </div>
+                        
+                        
+                        </div>
+                        </div>
+                        <div class="block-content block-content-mini block-content-full border-t">
+                        <div class="row">
+                        <div class="col-xs-6">
+                        <button class="wizard-prev btn btn-default disabled" type="button"><i class="fa fa-arrow-left"></i> 返回</button>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                        <button class="wizard-next btn btn-default" type="button" style="display: inline-block;">下一步 <i class="fa fa-arrow-right"></i></button>
+                        <button class="wizard-finish btn btn-primary" type="submit" style="display: none;"><i class="fa fa-check"></i> 提交</button>
+                        </div>
+                        </div>
+                        </div>
+                        </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -895,6 +968,14 @@
 <!--页面js-->
 
 <script src="__ADMIN_JS__/core/jquery.countTo.min.js"></script>
+<script src="https://demo.pixelcave.com/oneui/assets/js/pages/base_forms_wizard.js"></script>
+<script src="https://demo.pixelcave.com/oneui/assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+
+
+
+
+<script src="https://demo.pixelcave.com/oneui/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
 <script>
     jQuery(function () {
         App.initHelpers(['appear-countTo']);

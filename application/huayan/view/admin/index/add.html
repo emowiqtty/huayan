@@ -263,19 +263,19 @@
 
                         <div class="form-group">
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="js-masked-time form-control" type="text" id="example-masked-time" name="rz[][time]" placeholder="00:00">
+                            <input class="js-masked-time form-control" type="text" id="example-masked-time" name="time[]" placeholder="00:00">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][ccseyhl]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="ccseyhl[]">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][ccszd]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="ccszd[]">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][yszd]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="yszd[]">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][lqzd]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="lqzd[]">
                             </div>
                         </div>
 
@@ -294,7 +294,7 @@
                             //添加一行
                             function addCol() {　
 
-                    　　　　　　var col = "<div class=\"form-group\" id=\"newtable\"><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"js-masked-time form-control\" type=\"text\" name=\"rz[][time]\" placeholder=\"00:00\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][ccseyhl]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][ccszd]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][yszd]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][lqzd]\"></div></div>";
+                    　　　　　　var col = "<div class=\"form-group\" id=\"newtable\"><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"js-masked-time form-control\" type=\"text\" name=\"time[]\" placeholder=\"00:00\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"ccseyhl[]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"ccszd[]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"yszd[]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"lqzd[]\"></div></div>";
                     　　　　　　$("#abc").before(col);　
                     　　　　}　
                             function delCol() {　

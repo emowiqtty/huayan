@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"F:\web\huayan/application/user/view/admin/publics\signin.html";i:1489042525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"F:\web\huayan/application/user/view/admin/publics\signin.html";i:1497594086;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
 
-        <title>DolphinPHP - 海豚PHP框架</title>
+        <title>吉首市城市供水总公司</title>
 
         <meta name="description" content="">
         <meta name="author" content="caiweiming">
@@ -55,8 +55,8 @@
                         <div class="push-30-t push-50 animated fadeIn">
                             <!-- Login Title -->
                             <div class="text-center">
-                                <img src="__ADMIN_IMG__/logo-signin.png" alt="海豚PHP框架">
-                                <p class="text-muted push-15-t">海豚PHP框架</p>
+                                <img src="__ADMIN_IMG__/logo-signin.png" alt="水质填报系统">
+                                <p class="text-muted push-15-t">水质填报系统</p>
                             </div>
                             <!-- END Login Title -->
 
@@ -115,7 +115,7 @@
 
         <!-- Login Footer -->
         <div class="pulldown push-30-t text-center animated fadeInUp">
-            <small class="text-muted"><span class="js-year-copy"></span> &copy; DolphinPHP 1.0</small>
+            <small class="text-muted"><span class="js-year-copy"></span> &copy; jszls 1.0</small>
         </div>
         <!-- END Login Footer -->
 

@@ -44,8 +44,7 @@
 <!-- Error Footer -->
 <div class="content pulldown text-muted text-center">
     极简 · 极速 · 极致<br>
-    海豚PHP，让开发更简单！<br>
-    由 <a class="link-effect" href="http://www.dolphinphp.com">DolphinPHP</a> 强力驱动 <a class="link-effect" href="http://www.zrthink.com">卓锐软件</a> 倾情奉献
+    <a class="link-effect" href="http://www.jszls.com.cn"></a> 1.0 <a class="link-effect" href="http://www.jszls.com.cn">吉首市城市供水总公司</a> 
 </div>
 <!-- END Error Footer -->
 

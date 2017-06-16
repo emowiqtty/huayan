@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:53:"F:\web\huayan/application/admin\view\index\index.html";i:1489042525;s:48:"F:\web\huayan/application/admin\view\layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:53:"F:\web\huayan/application/admin\view\index\index.html";i:1497590190;s:48:"F:\web\huayan/application/admin\view\layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -555,7 +555,7 @@
     <?php endif; ?>
     
     <div class="row">
-        <?php echo hook('admin_index'); ?>
+        预留区域
     </div>
 
         </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:58:"F:\web\huayan/application/huayan/view/admin/index\add.html";i:1497512863;s:48:"F:\web\huayan/application/admin/view/layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:58:"F:\web\huayan/application/huayan/view/admin/index\add.html";i:1497574422;s:48:"F:\web\huayan/application/admin/view/layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -822,19 +822,19 @@
 
                         <div class="form-group">
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="js-masked-time form-control" type="text" id="example-masked-time" name="rz[][time]" placeholder="00:00">
+                            <input class="js-masked-time form-control" type="text" id="example-masked-time" name="time[]" placeholder="00:00">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][ccseyhl]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="ccseyhl[]">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][ccszd]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="ccszd[]">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][yszd]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="yszd[]">
                             </div>
                             <div class="col-sm-1 col-sm-offset-101">
-                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="rz[][lqzd]">
+                            <input class="form-control" type="text" id="simple-classic-progress-firstname" name="lqzd[]">
                             </div>
                         </div>
 
@@ -853,7 +853,7 @@
                             //添加一行
                             function addCol() {　
 
-                    　　　　　　var col = "<div class=\"form-group\" id=\"newtable\"><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"js-masked-time form-control\" type=\"text\" name=\"rz[][time]\" placeholder=\"00:00\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][ccseyhl]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][ccszd]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][yszd]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"rz[][lqzd]\"></div></div>";
+                    　　　　　　var col = "<div class=\"form-group\" id=\"newtable\"><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"js-masked-time form-control\" type=\"text\" name=\"time[]\" placeholder=\"00:00\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"ccseyhl[]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"ccszd[]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"yszd[]\"></div><div class=\"col-sm-1 col-sm-offset-101\"><input class=\"form-control\" type=\"text\" name=\"lqzd[]\"></div></div>";
                     　　　　　　$("#abc").before(col);　
                     　　　　}　
                             function delCol() {　

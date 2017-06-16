@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:60:"F:\web\huayan/application/huayan/view/admin/index\index.html";i:1497415569;s:48:"F:\web\huayan/application/admin/view/layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:60:"F:\web\huayan/application/huayan/view/admin/index\index.html";i:1497590086;s:48:"F:\web\huayan/application/admin/view/layout.html";i:1496481965;s:46:"./application/common/builder/aside/layout.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/recent.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/online.html";i:1489042525;s:53:"./application/common/builder/aside/blocks/switch.html";i:1489042525;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -560,7 +560,7 @@
             <?php echo hook('page_tips'); ?>
             
             
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+<script src="__ADMIN_JS__/Chart.js"></script>
 <div class="bg-image img-rounded overflow-hidden push" style="background-image: url('__ADMIN_IMG__/huayan/20170614114324.jpg');">
 <div class="bg-black-op">
 <div class="content">
@@ -624,7 +624,7 @@
 </div>
 </div>
 </div>
-<script>new Chart(document.getElementById("chartjs01"),{"type":"line","data":{"labels":["2017-6-8","2017-6-9","2017-6-10","2017-6-11","2017-6-12","2017-6-13","2017-6-14"],"datasets":[{"label":"源水水温","data":[65,59,27,81,56,55,40],"fill":false,"borderColor":"#03A9F4","lineTension":0.1},{"label":"出厂水水温","data":[11,21,80,81,33,51,30],"fill":false,"borderColor":"#9C27B0","lineTension":0.1}]},"options":{}});</script>
+<script>new Chart(document.getElementById("chartjs01"),{"type":"line","data":{"labels":<?php echo $res['riqi']; ?>,"datasets":[{"label":"源水水温","data":<?php echo $res['yswd']; ?>,"fill":false,"borderColor":"#03A9F4","lineTension":0.1},{"label":"出厂水水温","data":<?php echo $res['ccswd']; ?>,"fill":false,"borderColor":"#9C27B0","lineTension":0.1}]},"options":{}});</script>
 
 <div class="col-lg-4">
 <div class="block">
@@ -634,14 +634,14 @@
 <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
 </li>
 </ul>
-<h3 class="block-title">近7日浊度变化</h3>
+<h3 class="block-title">近7日pH值变化</h3>
 </div>
 <div class="block-content block-content-full text-center"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
 <canvas id="chartjs02" class="js-chartjs2-lines" width="710" height="355" style="display: block; width: 710px; height: 355px;"></canvas>
 </div>
 </div>
 </div>
-<script>new Chart(document.getElementById("chartjs02"),{"type":"line","data":{"labels":["2017-6-8","2017-6-9","2017-6-10","2017-6-11","2017-6-12","2017-6-13","2017-6-14"],"datasets":[{"label":"源水浊度","data":[65,59,27,81,56,55,40],"fill":false,"borderColor":"rgb(15, 192, 392)","lineTension":0.1},{"label":"出厂水浊度","data":[11,21,80,81,33,51,30],"fill":false,"borderColor":"rgb(55, 142, 292)","lineTension":0.1}]},"options":{}});</script>
+<script>new Chart(document.getElementById("chartjs02"),{"type":"line","data":{"labels":<?php echo $res['riqi']; ?>,"datasets":[{"label":"源水pH值","data":<?php echo $res['ysph']; ?>,"fill":false,"borderColor":"rgb(15, 192, 392)","lineTension":0.1},{"label":"出厂水pH值","data":<?php echo $res['ccsph']; ?>,"fill":false,"borderColor":"rgb(55, 142, 292)","lineTension":0.1}]},"options":{}});</script>
 
 <div class="col-lg-4">
 <div class="block">
